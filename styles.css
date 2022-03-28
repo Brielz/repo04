@@ -1,0 +1,59 @@
+.titulo{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-bottom: 1px solid black;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.contenedor-informativo{
+    background-color: rgb(192, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.texto-informativo{
+    font-weight: 600;
+}
+.title-style{
+    background-color: black;
+    color: white;
+}
+.subtitulo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 400;
+    color: gray;
+}
+.contenedor-tabla{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.tabla-grid{
+    display: grid;
+    width: 450px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(repeat-fill, 50px);
+    border: 1px solid black;
+    box-shadow: 3px 3px black;
+    border-radius: 5px;
+    background-color: aliceblue;
+    transition: .2s ease;
+
+}
+.tabla-grid p{
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 1em;
+    margin: 0;
+}
+.row{
+    border: 1px solid black;
+}
+
+.tabla-grid:hover{
+    transform: translateY(-1em);
+}
