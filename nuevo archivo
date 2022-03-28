@@ -1,0 +1,154 @@
+[33mcommit b69db02165931681252d7e0436cfa173f960b2cc[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: brielz <brielz112@gmail.com>
+Date:   Mon Mar 28 11:29:03 2022 +0200
+
+    first commit
+
+[1mdiff --git a/funcionInventada.js b/funcionInventada.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..08778d7[m
+[1m--- /dev/null[m
+[1m+++ b/funcionInventada.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m{\rtf1}[m
+\ No newline at end of file[m
+[1mdiff --git a/index.html b/index.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..788ce28[m
+[1m--- /dev/null[m
+[1m+++ b/index.html[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <link rel="stylesheet" href="styles.css">[m
+[32m+[m[32m    <title>Document</title>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <div class="" id="header"></div>[m
+[32m+[m[32m    <div class="" id="tabla"></div>[m
+[32m+[m
+[32m+[m[32m    <script src="main.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/main.js b/main.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3caec72[m
+[1m--- /dev/null[m
+[1m+++ b/main.js[m
+[36m@@ -0,0 +1,44 @@[m
+[32m+[m[32mlet header = document.getElementById("header");[m
+[32m+[m[32mlet tabla = document.getElementById("tabla");[m
+[32m+[m[32mlet itemGen = document.createElement("p");[m
+[32m+[m[32m// let itemGen = document.getElementById("item-generator");[m
+[32m+[m[32mconst arregloItems = ["item", "item", "item", "item", "item", "item", "item", "item", "item"];[m
+[32m+[m[32mlet item ="";[m
+[32m+[m[32mconst encabezado = () => {[m
+[32m+[m[32m    header.innerHTML = `[m
+[32m+[m[32m    <h1 class="titulo">Proyecto Fun<span class="title-style">dacio Esplai</span> </h1>[m
+[32m+[m[32m    <div class="contenedor-informativo">[m
+[32m+[m[32m        <p class="texto-informativo">Texto de prueba</p>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <h3 class="subtitulo">soy un subtitulo</h3>[m
+[32m+[m[32m    `[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mconst iterar = (i) => {[m
+[32m+[m[32m    for (; i < arregloItems.length; i++) {[m
+[32m+[m[32m        item = '<p>' + arregloItems[i] + '</p>';[m
+[32m+[m[32m    }[m
+[32m+[m[32m    return item;[m
+[32m+[m[32m}[m
+[32m+[m[32mconst tablaMet = () => {[m
+[32m+[m
+[32m+[m[32m    itemGen.innerHTML = "Hola";[m[41m   [m
+[32m+[m[41m    [m
+[32m+[m[32m    tabla.innerHTML = `[m
+[32m+[m[32m        <div class="contenedor-tabla">[m
+[32m+[m[32m            <div class="tabla-grid">[m
+[32m+[m[32m            <p class="row">tabla 1</p>[m
+[32m+[m[32m            <p class="row">tabla 2</p>[m
+[32m+[m[32m            <p class="row">tabla 3</p>[m
+[32m+[m[32m            <p class="">Hola</p>[m
+[32m+[m[32m            <p class="">Mundo</p>[m
+[32m+[m[32m            <p class="">QueLoQue</p>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        `[m
+[32m+[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m[32m// iterar(arregloItems.length)[m
+[32m+[m[32mencabezado();[m
+[32m+[m[32mtablaMet();[m
+\ No newline at end of file[m
+[1mdiff --git a/styles.css b/styles.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..59a3b74[m
+[1m--- /dev/null[m
+[1m+++ b/styles.css[m
+[36m@@ -0,0 +1,59 @@[m
+[32m+[m[32m.titulo{[m
+[32m+[m[32m    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;[m
+[32m+[m[32m    border-bottom: 1px solid black;[m
+[32m+[m[32m    font-weight: 400;[m
+[32m+[m[32m    padding-bottom: 10px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.contenedor-informativo{[m
+[32m+[m[32m    background-color: rgb(192, 255, 255);[m
+[32m+[m[32m    border-radius: 5px;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    margin: 10px 0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.texto-informativo{[m
+[32m+[m[32m    font-weight: 600;[m
+[32m+[m[32m}[m
+[32m+[m[32m.title-style{[m
+[32m+[m[32m    background-color: black;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m}[m
+[32m+[m[32m.subtitulo{[m
+[32m+[m[32m    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;[m
+[32m+[m[32m    font-weight: 400;[m
+[32m+[m[32m    color: gray;[m
+[32m+[m[32m}[m
+[32m+[m[32m.contenedor-tabla{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m}[m
+[32m+[m[32m.tabla-grid{[m
+[32m+[m[32m    display: grid;[m
+[32m+[m[32m    width: 450px;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    grid-template-columns: repeat(3, 150px);[m
+[32m+[m[32m    grid-template-rows: repeat(repeat-fill, 50px);[m
+[32m+[m[32m    border: 1px solid black;[m
+[32m+[m[32m    box-shadow: 3px 3px black;[m
+[32m+[m[32m    border-radius: 5px;[m
+[32m+[m[32m    background-color: aliceblue;[m
+[32m+[m[32m    transition: .2s ease;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.tabla-grid p{[m
+[32m+[m[32m    font-weight: 700;[m
+[32m+[m[32m    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;[m
+[32m+[m[32m    border-left: 1px solid black;[m
+[32m+[m[32m    border-right: 1px solid black;[m
+[32m+[m[32m    padding: 1em;[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.row{[m
+[32m+[m[32m    border: 1px solid black;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.tabla-grid:hover{[m
+[32m+[m[32m    transform: translateY(-1em);[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
